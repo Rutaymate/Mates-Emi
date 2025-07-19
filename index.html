@@ -48,28 +48,29 @@
       font-weight: bold;
     }
 
-   .hero {
+  .hero {
   background-image: url('https://i.postimg.cc/m2hrJPTG/Imagen-de-Whats-App-2025-07-19-a-las-04-08-35-df3bbccb.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 60vh;
+  min-height: 50vh; /* Podés bajar esta altura si querés ver más del mate */
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   color: var(--blanco);
   position: relative;
   text-shadow: 1px 1px 4px #000;
 }
 
+
 .hero .overlay {
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: flex-start; /* Esto sube el contenido hacia arriba */
+  align-items: flex-start;
   justify-content: center;
-  padding-top: 4rem; /* Ajustá este valor para subir o bajar la frase */
+  padding-top: 1rem; /* Esto sube más la frase */
 }
     
 .hero h2 {
