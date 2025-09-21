@@ -144,6 +144,29 @@
   padding: 10px;
   box-sizing: border-box;
 }
+    .producto.agotado {
+  position: relative;
+}
+
+.producto.agotado::after {
+  content: "SIN STOCK";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+  background: rgba(220, 0, 0, 0.8);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.producto.agotado img {
+  opacity: 0.5;
+  filter: grayscale(80%);
+}
 .slider {
   position: relative;
   overflow: hidden;
@@ -304,7 +327,7 @@
     </a>
   </div>
 
-     <div class="producto">
+     <div class="producto agotado">
     <a href="https://wa.me/5492664730576?text=Hola!%20Estoy%20interesado%20en%20el%20Mate%20ranchero" target="_blank">
       <img src="https://i.postimg.cc/mrxhKNmc/Imagen-de-Whats-App-2025-08-15-a-las-23-17-34-dded2edb.jpg" alt="Mate RANCHERO">
       <h3>MATE RANCHERO</h3>
@@ -318,7 +341,7 @@
     </a>
   </div>
 
-<div class="producto">
+<div class="producto agotado">
     <a href="https://wa.me/5492664730576?text=Hola!%20Estoy%20interesado%20en%20el%20Mate%20imperial%20cuero%20cincelado" target="_blank">
       <img src="https://i.postimg.cc/dVzWhRXZ/IMPERIAL-CINCELADO-PNG.png" alt="imperial cuero cincelado">
       <h3>IMPERIAL CUERO CINCELADO</h3>
