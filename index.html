@@ -297,10 +297,42 @@
   line-height: 1.8;
   color: var(--gris);
 }
+/* ---- ANIMACIÓN DE CARGA ---- */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: var(--agua);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.logo-carga {
+  width: 140px;
+  height: auto;
+  animation: girar 2s linear infinite;
+}
+
+/* Efecto de rotación suave */
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
     
   </style>
 </head>
 <body>
+  <!-- ANIMACIÓN DE CARGA -->
+<div id="preloader">
+  <img src="https://i.postimg.cc/mkpjjN8f/LOGO-RUTA-Y-MATE-PNG.png" alt="Ruta y Mate Logo" class="logo-carga">
+</div>
   <header>
     <h1>Ruta y Mate</h1>
   </header>
@@ -556,6 +588,10 @@ document.querySelectorAll('.slider-producto').forEach(slider => {
 
   // Slide automático
   setInterval(() => show(index + 1), 3000);
+});
+   window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  preloader.classList.add('hidden');
 });
 </script>
 </body>
