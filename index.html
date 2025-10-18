@@ -267,6 +267,7 @@
 
   <section class="seccion" id="productos">
     <h2>Nuestros Productos</h2>
+    
      <p style="text-align:center; font-weight:bold; margin-bottom: 2rem;">Seleccioná el que más te guste 😊</p>
     
    <div class="productos">
@@ -294,10 +295,19 @@
 
   <div class="producto">
     <a href="https://wa.me/5492664730576?text=Hola!%20Estoy%20interesado%20en%20el%20Mate%20Imperial%20de%20Alpaca%20Lisa" target="_blank">
-      <img src="https://i.postimg.cc/jSwDhHBT/imperial-alpaca-lisa-bordo.jpg" alt="Mate Imperial Alpaca Lisa">
-      <h3>Imperial Alpaca Lisa bordo</h3>
-    </a>
-  </div>
+     <!-- slider-producto dentro del <a> (los botones manejarán el event.preventDefault) -->
+    <div class="slider-producto">
+      <button class="prev" aria-label="Anterior">&lsaquo;</button>
+      <div class="imagenes">
+        <img src="https://i.postimg.cc/qvw7thFy/imperial-alpaca-lisa-negro.jpg" alt="Alpaca lisa 1">
+        <img src="https://i.postimg.cc/6QTByHRg/imperial-alpaca-lisa-bordo.jpg" alt="Alpaca lisa 2">
+      </div>
+      <button class="next" aria-label="Siguiente">&rsaquo;</button>
+    </div>
+
+    <h3>IMPERIAL ALPACA LISA</h3>
+  </a>
+</div>
 
   <div class="producto">
     <a href="https://wa.me/5492664730576?text=Hola!%20Estoy%20interesado%20en%20el%20Mate%20Camionero%20de%20Algarrobo" target="_blank">
@@ -357,17 +367,25 @@
 
      <div class="producto">
     <a href="https://wa.me/5492664730576?text=Hola!%20Estoy%20interesado%20en%20el%20Mate%20imperial%20NEGRO" target="_blank">
-      <img src="https://i.postimg.cc/7PK1sNtJ/IMPERIAL-NEGRO.jpg" alt="imperial virola cincelada">
-      <h3>IMPERIAL ALPACA LISA NEGRO</h3>
+      <img src="https://i.postimg.cc/7PK1sNtJ/IMPERIAL-NEGRO.jpg" alt="imperial virola acero">
+      <h3>IMPERIAL VIROLA DE ACERO</h3>
     </a>
   </div>
 
     <div class="producto">
     <a href="https://wa.me/5492664730576?text=Hola!%20Estoy%20interesado%20en%20el%20Mate%20imperial%20de%20algarrobo" target="_blank">
-      <img src="https://i.postimg.cc/6qfrtrtg/imperial-algarrobo.jpg" alt="imperial algarrobo">
-      <h3>IMPERIAL ALGARROBO</h3>
-    </a>
-  </div>
+     <div class="slider-producto">
+      <button class="prev" aria-label="Anterior">&lsaquo;</button>
+      <div class="imagenes">
+        <img src="https://i.postimg.cc/w3K1kC5j/imperial-algarrobo.jpg" alt="Imperial algarrobo 1">
+        <img src="https://i.postimg.cc/6QhCpprh/IMPERIAL-DE-ALGARROBO.jpg" alt="Imperial algarrobo 2">
+      </div>
+      <button class="next" aria-label="Siguiente">&rsaquo;</button>
+    </div>
+
+    <h3>IMPERIAL DE ALGARROBO</h3>
+  </a>
+</div>
 
      <div class="producto">
     <a href="https://wa.me/5492664730576?text=Hola!%20Estoy%20interesado%20en%20el%20torpedo%20cincelado" target="_blank">
@@ -378,7 +396,7 @@
 
  <div class="producto">
     <a href="https://wa.me/5492664730576?text=Hola!%20Estoy%20interesado%20en%20el%20torpedo%20de%20acero%20inoxidable" target="_blank">
-      <img src="https://i.postimg.cc/pTKkkhrL/TORPEDO-ACERO.jpg" alt="torpedo acero inox">
+      <img src="https://i.postimg.cc/442bcyDZ/TORPEDO-DE-ACERO.jpg" alt="torpedo acero inox">
       <h3>TORPEDO ACERO INOX</h3>
     </a>
   </div>    
