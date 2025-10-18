@@ -591,7 +591,9 @@ document.querySelectorAll('.slider-producto').forEach(slider => {
 });
    window.addEventListener('load', () => {
   const preloader = document.getElementById('preloader');
-  preloader.classList.add('hidden');
+  setTimeout(() => {
+    preloader.classList.add('hidden');
+  }, 2000);
 });
 </script>
 </body>
