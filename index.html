@@ -309,7 +309,7 @@
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
-/* --- Efecto de brillo celeste y blanco --- */
+/* --- Efecto ola con brillo celeste y blanco --- */
 #tituloRuta {
   font-size: 3rem;
   font-weight: bold;
@@ -317,15 +317,27 @@
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: brilloCeleste 6s ease-in-out infinite;
+  animation: brilloCeleste 10s ease-in-out infinite, ola 3s ease-in-out infinite;
   text-align: center;
   letter-spacing: 2px;
+  display: inline-block;
+  transform-origin: center;
 }
 
+/* Brillo celeste que se mueve lentamente */
 @keyframes brilloCeleste {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+/* Movimiento tipo ola */
+@keyframes ola {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-5px) rotate(-1deg); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(5px) rotate(1deg); }
+  100% { transform: translateY(0); }
 }
 
 
