@@ -309,6 +309,24 @@
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
+    #tituloRuta {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffde59, #ff914d, #1b85c1, #ffde59);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brillar 5s ease infinite;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+@keyframes brillar {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+    
 #preloader.hidden {
   opacity: 0;
   visibility: hidden;
@@ -336,8 +354,9 @@
   <img src="https://i.postimg.cc/mkpjjN8f/LOGO-RUTA-Y-MATE-PNG.png" alt="Ruta y Mate Logo" class="logo-carga">
 </div>
   <header>
-    <h1>Ruta y Mate</h1>
-  </header>
+  <h1 id="tituloRuta">Ruta y Mate</h1>
+</header>
+
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#productos">Productos</a>
