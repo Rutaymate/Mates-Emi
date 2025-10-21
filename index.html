@@ -309,19 +309,20 @@
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
-    #tituloRuta {
+   /* --- Efecto de brillo celeste y blanco --- */
+#tituloRuta {
   font-size: 3rem;
   font-weight: bold;
-  background: linear-gradient(90deg, #ffde59, #ff914d, #1b85c1, #ffde59);
-  background-size: 400% 400%;
+  background: linear-gradient(90deg, #1b85c1, #ffffff, #1b85c1);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: brillar 5s ease infinite;
+  animation: brilloCeleste 4s ease-in-out infinite;
   text-align: center;
   letter-spacing: 2px;
 }
 
-@keyframes brillar {
+@keyframes brilloCeleste {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
