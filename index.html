@@ -6,12 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RUTA Y MATE</title>
   <style>
-    :root {
-      --agua: #1b85c1;
-      --agua-oscuro: #0c6aa0;
-      --gris: #333;
-      --blanco: #fff;
-    }
+  :root {
+    --agua: #1b85c1;
+    --agua-oscuro: #0c6aa0;
+    --gris: #333;
+    --blanco: #fff;
+  }
+
     html {
     scroll-behavior: smooth;
   }
@@ -297,18 +298,42 @@
   line-height: 1.8;
   color: var(--gris);
 }
-/* ---- ANIMACIÓN DE CARGA ---- */
-#preloader {
-  position: fixed;
-  inset: 0;
-  background: var(--agua);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
-}
 
+  /* ---- ANIMACIÓN DE CARGA ---- */
+  #preloader {
+    position: fixed;
+    inset: 0;
+    background: var(--agua);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+  }
+
+  .logo-carga {
+    width: 140px;
+    height: auto;
+    animation: bounceIn 1.5s ease;
+  }
+
+  /* Barra de carga */
+  #barra-carga {
+    width: 0%;
+    height: 6px;
+    background: linear-gradient(90deg, #b3e5fc, #ffffff, #b3e5fc);
+    border-radius: 10px;
+    margin-top: 25px;
+    box-shadow: 0 0 8px #b3e5fc;
+    animation: llenarBarra 2s ease-in-out forwards;
+  }
+
+  @keyframes llenarBarra {
+    0% { width: 0%; opacity: 0.4; }
+    50% { width: 60%; opacity: 0.8; }
+    100% { width: 100%; opacity: 1; }
+  }
 /* --- Efecto de brillo pulsante celeste/blanco --- */
 #tituloRuta {
   font-size: 3rem;
@@ -359,10 +384,12 @@
   </style>
 </head>
 <body>
-  <!-- ANIMACIÓN DE CARGA -->
+<!-- ANIMACIÓN DE CARGA -->
 <div id="preloader">
   <img src="https://i.postimg.cc/mkpjjN8f/LOGO-RUTA-Y-MATE-PNG.png" alt="Ruta y Mate Logo" class="logo-carga">
+  <div id="barra-carga"></div>
 </div>
+
   <header>
   <h1 id="tituloRuta">Ruta y Mate</h1>
 </header>
