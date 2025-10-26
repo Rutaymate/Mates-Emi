@@ -416,51 +416,7 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-/* imagen moto animada */
-.envio-domicilio {
-  text-align: center;
-  position: relative;
-  padding: 2rem;
-  background: linear-gradient(to right, #e0f7ff, #ccefff); /* fondo suave celeste */
-  border-radius: 10px;
-  margin: 2rem auto;
-  max-width: 1000px;
-}
 
-/* Moto como caja simple */
-.moto {
-  width: 80px;
-  height: 40px;
-  background: red;
-  border-radius: 8px;
-  position: relative;
-  margin: 1.5rem auto 0;
-  animation: moverMoto 3s linear infinite;
-}
-
-/* Ruedas */
-.moto::before,
-.moto::after {
-  content: '';
-  width: 20px;
-  height: 20px;
-  background: black;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -10px;
-}
-
-.moto::before { left: 5px; }
-.moto::after { right: 5px; }
-
-/* Animación: moto se mueve de izquierda a derecha */
-@keyframes moverMoto {
-  0% { transform: translateX(-50px); }
-  50% { transform: translateX(50px); }
-  100% { transform: translateX(-50px); }
-}
-
-    
   </style>
 </head>
 <body>
@@ -685,11 +641,7 @@
  <div class="contador-ventas">
   <span id="contador">0</span>+ ventas realizadas en todo el país 🚀
 </div>
-  <section class="seccion envio-domicilio">
-  <h2>🚚 Envío a Domicilio</h2>
-  <p>¡Contamos con envío a tu casa para que disfrutes tu mate sin moverte!</p>
-  <div class="moto"></div>
-</section>
+  
   <section class="seccion" id="contacto">
     <h2>Contacto 📞</h2>
     <p>Escribinos por WhatsApp o en nuestras redes sociales:</p>
