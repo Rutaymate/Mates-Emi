@@ -363,7 +363,7 @@
 
 .contador-ventas {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #0c6aa0;
   margin-top: 1.5rem;
@@ -371,6 +371,13 @@
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.contador-ventas.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
     
 #preloader.hidden {
@@ -632,8 +639,8 @@
   </div>
 </section>
 
-  <div class="contador-ventas">
-  <span id="contador">0</span>+ ventas realizadas en todo el país
+ <div class="contador-ventas">
+  <span id="contador">0</span>+ ventas realizadas en todo el país 🚀
 </div>
   
   <section class="seccion" id="contacto">
@@ -699,19 +706,38 @@ document.querySelectorAll('.slider-producto').forEach(slider => {
 });
 
    // contador
-   let contador = document.getElementById('contador');
+ let contador = document.getElementById('contador');
 let numero = 0;
-let objetivo = 100; // cambiá el número si querés
-let velocidad = 30; // menor número = más rápido
+let objetivo = 100; // Cambiá este número a la cantidad de ventas reales
+let velocidad = 25;
+let contadorIniciado = false;
 
-let intervalo = setInterval(() => {
-  if (numero < objetivo) {
-    numero++;
-    contador.textContent = numero;
-  } else {
-    clearInterval(intervalo);
+// Función que anima el número
+function iniciarContador() {
+  if (contadorIniciado) return;
+  contadorIniciado = true;
+
+  let intervalo = setInterval(() => {
+    if (numero < objetivo) {
+      numero++;
+      contador.textContent = numero;
+    } else {
+      clearInterval(intervalo);
+    }
+  }, velocidad);
+}
+
+// Detectar cuando el contador entra en pantalla
+window.addEventListener('scroll', () => {
+  const contadorVentas = document.querySelector('.contador-ventas');
+  const posicion = contadorVentas.getBoundingClientRect().top;
+  const alturaPantalla = window.innerHeight;
+
+  if (posicion < alturaPantalla - 100) {
+    contadorVentas.classList.add('visible');
+    iniciarContador();
   }
-}, velocidad);
+});
 </script>
 </body>
 </html>
