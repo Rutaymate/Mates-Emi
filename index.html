@@ -417,6 +417,30 @@
   100% { background-position: 0% 50%; }
 }
 
+    /* --- ESTILOS MODO NOCHE --- */
+  body.noche {
+    --agua: #0c2c4a;        /* azul oscuro */
+    --agua-oscuro: #06172a; /* aún más oscuro */
+    --gris: #ccc;
+    --blanco: #111;
+    background-color: var(--blanco);
+    color: var(--gris);
+  }
+
+  body.noche header,
+  body.noche nav,
+  body.noche footer {
+    background-color: var(--agua);
+  }
+
+  body.noche .producto {
+    border-color: var(--agua-oscuro);
+  }
+
+  body.noche .curar-mate-pasos {
+    background-color: #1a1a1a;
+    color: #ccc;
+  }
     
   </style>
 </head>
@@ -429,6 +453,9 @@
 
   <header>
   <h1 id="tituloRuta">Ruta y Mate</h1>
+      <button id="toggleNoche" style="position:absolute; top:10px; right:20px; padding:0.5rem 1rem; border:none; border-radius:5px; cursor:pointer;">
+    🌙 Modo Noche
+  </button>
 </header>
 
   <nav>
@@ -736,6 +763,17 @@ window.addEventListener('scroll', () => {
   if (posicion < alturaPantalla - 100) {
     contadorVentas.classList.add('visible');
     iniciarContador();
+  }
+});
+  //MODO NOCHE
+   const btnNoche = document.getElementById('toggleNoche');
+
+btnNoche.addEventListener('click', () => {
+  document.body.classList.toggle('noche');
+  if(document.body.classList.contains('noche')) {
+    btnNoche.textContent = '☀️ Modo Día';
+  } else {
+    btnNoche.textContent = '🌙 Modo Noche';
   }
 });
 </script>
