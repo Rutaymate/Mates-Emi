@@ -384,13 +384,18 @@
 
 /* --- Fondo con textura gris suave para la sección SOBRE NOSOTROS --- */
 #nosotros {
-  background: linear-gradient(180deg, #d9f1ff 0%, #a8d8f0 100%);
-  background-image: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png');
-  background-blend-mode: overlay;
-  background-repeat: repeat;
+  background: linear-gradient(135deg, #b7e1ff, #d2f1ff, #b7e1ff);
+  background-size: 400% 400%;
+  animation: waves 12s ease infinite;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-radius: 10px;
+}
+
+@keyframes waves {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
     
