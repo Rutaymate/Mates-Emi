@@ -383,16 +383,18 @@
 }
 
 /* --- Fondo con textura gris suave para la sección SOBRE NOSOTROS --- */
+/* --- Fondo animado celeste tipo agua / cielo --- */
 #nosotros {
-  background: linear-gradient(135deg, #b7e1ff, #d2f1ff, #b7e1ff);
-  background-size: 400% 400%;
-  animation: waves 12s ease infinite;
+  background: linear-gradient(270deg, #8ed0ff, #d5f1ff, #a0dcff);
+  background-size: 600% 600%;
+  animation: fondoCeleste 10s ease infinite;
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-radius: 10px;
+  color: #222; /* mejora legibilidad */
 }
 
-@keyframes waves {
+@keyframes fondoCeleste {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
