@@ -361,7 +361,17 @@
   }
 }
 
-
+.contador-ventas {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0c6aa0;
+  margin-top: 1.5rem;
+  background-color: #e0f4ff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
     
 #preloader.hidden {
   opacity: 0;
@@ -622,6 +632,10 @@
   </div>
 </section>
 
+  <div class="contador-ventas">
+  <span id="contador">0</span>+ ventas realizadas en todo el país
+</div>
+  
   <section class="seccion" id="contacto">
     <h2>Contacto 📞</h2>
     <p>Escribinos por WhatsApp o en nuestras redes sociales:</p>
@@ -683,6 +697,21 @@ document.querySelectorAll('.slider-producto').forEach(slider => {
     preloader.classList.add('hidden');
   }, 2000);
 });
+
+   // contador
+   let contador = document.getElementById('contador');
+let numero = 0;
+let objetivo = 100; // cambiá el número si querés
+let velocidad = 30; // menor número = más rápido
+
+let intervalo = setInterval(() => {
+  if (numero < objetivo) {
+    numero++;
+    contador.textContent = numero;
+  } else {
+    clearInterval(intervalo);
+  }
+}, velocidad);
 </script>
 </body>
 </html>
