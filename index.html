@@ -417,72 +417,6 @@
   100% { background-position: 0% 50%; }
 }
 
-    #envios {
-  text-align: center;
-  margin: 3rem auto;
-  position: relative;
-}
-
-.camion-container {
-  width: 100%;
-  height: 120px;
-  overflow: hidden;
-  margin-top: 1.5rem;
-}
-
-.camion {
-  position: relative;
-  display: inline-block;
-  width: 150px;
-  height: 60px;
-  background-color: #1b85c1;
-  border-radius: 8px;
-  animation: moverCamion 5s linear infinite;
-}
-
-.camion .cabina {
-  position: absolute;
-  left: 0;
-  top: -20px;
-  width: 50px;
-  height: 50px;
-  background-color: #0c6aa0;
-  border-radius: 6px;
-}
-
-.camion .caja {
-  position: absolute;
-  left: 50px;
-  top: 0;
-  width: 100px;
-  height: 60px;
-  background-color: #ffcc00;
-  border-radius: 4px;
-}
-
-.camion .rueda {
-  position: absolute;
-  bottom: -10px;
-  width: 20px;
-  height: 20px;
-  background-color: #333;
-  border-radius: 50%;
-  border: 3px solid #000;
-}
-
-.camion .rueda-delantera {
-  right: 10px;
-}
-
-.camion .rueda-trasera {
-  left: 10px;
-}
-
-/* Animación de movimiento horizontal */
-@keyframes moverCamion {
-  0% { transform: translateX(-200px); }
-  100% { transform: translateX(120%); }
-}
 
   </style>
 </head>
@@ -708,18 +642,6 @@
  <div class="contador-ventas">
   <span id="contador">0</span>+ ventas realizadas en todo el país 🚀
 </div>
-
-<section class="seccion" id="envios">
-  <h2>🚚 Contamos con envío a domicilio</h2>
-  <div class="camion-container">
-    <div class="camion">
-      <div class="cabina"></div>
-      <div class="caja"></div>
-      <div class="rueda rueda-trasera"></div>
-      <div class="rueda rueda-delantera"></div>
-    </div>
-  </div>
-</section>
   
   <section class="seccion" id="contacto">
     <h2>Contacto 📞</h2>
