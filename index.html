@@ -417,6 +417,28 @@
   100% { background-position: 0% 50%; }
 }
 
+.cartel-ruta {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(180deg, #1b85c1, #0c6aa0);
+  border: 4px solid white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  text-transform: uppercase;
+  position: relative;
+}
+
+.cartel-ruta::after {
+  content: "🛣️";
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%) rotate(10deg);
+  font-size: 2rem;
+}
 
   </style>
 </head>
@@ -618,7 +640,7 @@
   </section>
 
 <section class="seccion" id="curar-mate">
-  <h2>¿Cómo curar el mate? 🤔</h2>
+  <h2 class="cartel-ruta">Cómo curar el mate</h2>
   <p>Es importante saber curarlo ya que ayuda a sellar los poros de la calabaza para evitar sabores amargos.</p>
  <div class="curar-mate-pasos">
     1️⃣ Lavar el interior del mate con agua caliente.<br><br>
