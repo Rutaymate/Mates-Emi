@@ -417,73 +417,6 @@
   100% { background-position: 0% 50%; }
 }
 
-.cartel-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin: 60px auto;
-}
-
-/* Sogas */
-.soga {
-  position: absolute;
-  top: 0;
-  left: 40%;
-  width: 3px;
-  height: 40px;
-  background-color: #8b5a2b;
-  transform: rotate(-10deg);
-  transform-origin: top;
-  animation: balanceo 2s ease-in-out infinite alternate;
-}
-
-.soga-derecha {
-  left: auto;
-  right: 40%;
-  transform: rotate(10deg);
-  animation-delay: 1s;
-}
-
-/* Cartel */
-.cartel-colgado {
-  display: inline-block;
-  background: linear-gradient(180deg, #caa472, #b5834b);
-  color: #3b2e1a;
-  font-family: 'Georgia', serif;
-  font-size: 2rem;
-  text-align: center;
-  padding: 20px 60px;
-  border: 6px solid #8b5a2b;
-  border-radius: 6px;
-  box-shadow: 0 10px 0 #704214, inset 0 2px 4px rgba(0,0,0,0.3);
-  text-shadow: 1px 1px 0 #fff5e1;
-  transform: rotate(0deg);
-  animation: balanceo 2s ease-in-out infinite alternate;
-  position: relative;
-  z-index: 2;
-}
-
-/* Animación de balanceo */
-@keyframes balanceo {
-  0% { transform: rotate(-3deg); }
-  100% { transform: rotate(3deg); }
-}
-
-/* Sombras suaves */
-.cartel-container::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  width: 200px;
-  height: 10px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  filter: blur(3px);
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
   </style>
 </head>
 <body>
@@ -683,10 +616,8 @@
 
   </section>
 
-<section class="cartel-container">
-  <div class="soga"></div>
-  <div class="soga soga-derecha"></div>
-  <h2 class="cartel-colgado">Cómo curar el mate</h2>
+<section class="seccion" id="curar-mate"> 
+  <h2>¿Cómo curar el mate? 🤔</h2>
   <p>Es importante saber curarlo ya que ayuda a sellar los poros de la calabaza para evitar sabores amargos.</p>
  <div class="curar-mate-pasos">
     1️⃣ Lavar el interior del mate con agua caliente.<br><br>
